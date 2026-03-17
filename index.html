@@ -5,126 +5,103 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Constructiva Ingenieros</title>
 <style>
-body { margin:0; font-family: Arial; }
-header { background:#000; color:#fff; padding:15px 30px; display:flex; justify-content:space-between; }
-header img { height:45px; }
-nav a { color:#fff; margin:0 10px; text-decoration:none; }
-
-.hero { background:#333; color:#fff; text-align:center; padding:80px 20px; }
-.btn { background:#25D366; color:#fff; padding:12px 20px; border-radius:8px; text-decoration:none; }
-
-.section { padding:50px 20px; text-align:center; }
-.grid { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
-.card { border:1px solid #ddd; padding:20px; border-radius:10px; width:260px; cursor:pointer; }
-.card:hover { background:#f5f5f5; }
-
-.gallery img { width:250px; border-radius:10px; }
-
-.modal {
- display:none;
- position:fixed;
- top:0; left:0;
- width:100%; height:100%;
- background:rgba(0,0,0,0.8);
- color:#fff;
- padding:40px;
-}
-.modal-content { max-width:600px; margin:auto; }
-.close { cursor:pointer; color:red; font-size:20px; }
-
-.whatsapp { position:fixed; bottom:20px; right:20px; background:#25D366; color:#fff; padding:15px; border-radius:50%; }
+body{margin:0;font-family:Arial;background:#f4f4f4}
+header{background:#000;color:#fff;padding:15px 30px;display:flex;justify-content:space-between}
+header img{height:45px}
+nav a{color:#fff;margin:0 10px;text-decoration:none}
+.hero{background:#222;color:#fff;text-align:center;padding:80px 20px}
+.hero h1{font-size:40px}
+.btn{background:#25D366;color:#fff;padding:12px 20px;border-radius:8px;text-decoration:none}
+.section{padding:50px 20px;text-align:center}
+.grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}
+.card{background:#fff;border-radius:10px;padding:20px;width:260px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+.card:hover{transform:scale(1.05)}
+.stats{display:flex;justify-content:center;gap:40px;margin-top:20px}
+.stat{font-size:20px}
+.gallery img{width:250px;border-radius:10px}
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);color:#fff;padding:40px}
+.modal-content{max-width:600px;margin:auto}
+.close{cursor:pointer;color:red}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:15px;border-radius:50%}
 </style>
 </head>
 <body>
-
 <header>
 <div><img src="LOGO.png"></div>
 <nav>
 <a href="#servicios">Servicios</a>
 <a href="#proyectos">Proyectos</a>
+<a href="#contacto">Contacto</a>
 </nav>
 </header>
-
 <section class="hero">
-<h1>CONSTRUCTIVA INGENIEROS</h1>
-<p>Ingeniería que transforma espacios</p>
-<a class="btn" href="https://wa.me/51900563515">Cotizar</a>
+<h1>ESPECIALISTAS EN OBRAS CIVILES Y URBANIZACIÓN</h1>
+<p>Ejecutamos proyectos de ingeniería con calidad, cumplimiento y experiencia comprobada</p>
+<a class="btn" href="https://wa.me/51900563515">Solicitar Cotización</a>
+<div class="stats">
+<div class="stat">+6 Años de experiencia</div>
+<div class="stat">+50 Proyectos ejecutados</div>
+<div class="stat">Cobertura nacional</div>
+</div>
 </section>
-
 <section id="servicios" class="section">
 <h2>Servicios</h2>
 <div class="grid">
 <div class="card" onclick="openModal('sanitaria')">Redes Sanitarias</div>
 <div class="card" onclick="openModal('tierra')">Movimiento de Tierra</div>
 <div class="card" onclick="openModal('topografia')">Topografía</div>
+<div class="card" onclick="openModal('dron')">Fotogrametria</div>
 </div>
 </section>
-
 <section id="proyectos" class="section">
-<h2>Proyectos</h2>
+<h2>Proyectos Destacados</h2>
 <div class="grid">
-<div class="card" onclick="openModal('proyecto1')">Puertas del Sol II</div>
-<div class="card" onclick="openModal('proyecto2')">Casa Blanca VII</div>
-<div class="card" onclick="openModal('proyecto3')">Planicie de Cañete</div>
-<div class="card" onclick="openModal('proyecto4')">Tótem Villa Refugio Del Sol</div>
-<div class="card" onclick="openModal('proyecto5')">Relleno ET4 y ET6</div>
+<div class="card" onclick="openModal('p1')">Puertas del Sol II</div>
+<div class="card" onclick="openModal('p2')">Casa Blanca VII</div>
+<div class="card" onclick="openModal('p3')">Planicie de Cañete</div>
+<div class="card" onclick="openModal('p4')">Tótem Refugio del Sol</div>
+<div class="card" onclick="openModal('p5')">Relleno ET4 y ET6</div>
 </div>
 </section>
-
 <section class="section gallery">
-<h2>Galería</h2>
+<h2>Galería de Obras</h2>
 <div class="grid">
 <img src="obra1.jpg">
 <img src="obra2.jpg">
 <img src="obra3.jpg">
+<img src="obra4.jpg">
+<img src="obra5.jpg">
 </div>
 </section>
-
+<section id="contacto" class="section">
+<h2>Contacto</h2>
+<p>📧 contacto@constructiva.com</p>
+<p>📞 +51 900 563 515</p>
+<a class="btn" href="https://wa.me/51900563515?text=Hola%20quiero%20cotizar%20un%20proyecto">Cotizar por WhatsApp</a>
+</section>
 <div id="modal" class="modal">
 <div class="modal-content">
 <span class="close" onclick="closeModal()">X</span>
-<img id="imagen" src="" style="width:100%; border-radius:10px; margin-bottom:15px;">
-<p id="contenido"></p>
+<img id="img" style="width:100%;border-radius:10px">
+<p id="text"></p>
 </div>
 </div>
-
 <a class="whatsapp" href="https://wa.me/51900563515">💬</a>
-
 <script>
-function openModal(tipo){
- let texto="";
- let img="";
-
- if(tipo==='proyecto1'){
- texto="Proyecto Puertas del Sol II: instalación de redes sanitarias con más de 1800m de tubería.";
- img="obra1.jpg";
- }
- if(tipo==='proyecto2'){
- texto="Proyecto Casa Blanca VII: movimiento de tierra y maquinaria pesada.";
- img="obra2.jpg";
- }
- if(tipo==='proyecto3'){
- texto="Construcción de parque Planicie de Cañete, área de 6500 m2.";
- img="obra3.jpg";
- }
- if(tipo==='proyecto4'){
- texto="Construcción de Tótem de ingreso Villa Refugio Del Sol Chiclayo.";
- img="obra4.jpg";
- }
- if(tipo==='proyecto5'){
- texto="Relleno ET4 y ET6 de Villa Refugio Del Sol Chiclayo.";
- img="obra5.jpg";
- }
-
- document.getElementById('contenido').innerText=texto;
- document.getElementById('imagen').src=img;
- document.getElementById('modal').style.display='block';
-}
-
-function closeModal(){
- document.getElementById('modal').style.display='none';
-}
+function openModal(t){
+let txt="";let img="";
+if(t==='p1'){txt="Redes sanitarias completas – +1800 ml tubería instaladas en urbanización.";img='obra1.jpg';}
+if(t==='p2'){txt="Movimiento de tierra y nivelación con maquinaria pesada.";img='obra2.jpg';}
+if(t==='p3'){txt="Construcción de parque en Planicie de Cañete – 6500 m2.";img='obra3.jpg';}
+if(t==='p4'){txt="Construcción de tótem de ingreso urbano con acabados.";img='obra4.jpg';}
+if(t==='p5'){txt="Relleno estructural ET4 y ET6 con compactación controlada.";img='obra5.jpg';}
+if(t==='sanitaria'){txt="Ejecución de redes de agua y alcantarillado.";img='obra1.jpg';}
+if(t==='tierra'){txt="Excavación, relleno y nivelación.";img='obra2.jpg';}
+if(t==='topografia'){txt="Levantamientos topográficos con tecnología moderna.";img='obra3.jpg';}
+document.getElementById('text').innerText=txt;
+document.getElementById('img').src=img;
+document.getElementById('modal').style.display='block';}
+function closeModal(){document.getElementById('modal').style.display='none';}
 </script>
-
 </body>
 </html>
