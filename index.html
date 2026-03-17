@@ -65,6 +65,9 @@ nav a { color:#fff; margin:0 10px; text-decoration:none; }
 <div class="grid">
 <div class="card" onclick="openModal('proyecto1')">Puertas del Sol II</div>
 <div class="card" onclick="openModal('proyecto2')">Casa Blanca VII</div>
+<div class="card" onclick="openModal('proyecto3')">Planicie de Cañete</div>
+<div class="card" onclick="openModal('proyecto4')">Tótem Villa Refugio Del Sol</div>
+<div class="card" onclick="openModal('proyecto5')">Relleno ET4 y ET6</div>
 </div>
 </section>
 
@@ -80,6 +83,7 @@ nav a { color:#fff; margin:0 10px; text-decoration:none; }
 <div id="modal" class="modal">
 <div class="modal-content">
 <span class="close" onclick="closeModal()">X</span>
+<img id="imagen" src="" style="width:100%; border-radius:10px; margin-bottom:15px;">
 <p id="contenido"></p>
 </div>
 </div>
@@ -89,24 +93,31 @@ nav a { color:#fff; margin:0 10px; text-decoration:none; }
 <script>
 function openModal(tipo){
  let texto="";
+ let img="";
 
- if(tipo==='sanitaria'){
- texto="Instalación de redes de agua potable y alcantarillado con conexiones domiciliarias según proyectos ejecutados en Chiclayo.";
- }
- if(tipo==='tierra'){
- texto="Movimiento de tierra con maquinaria pesada: excavadoras, rodillos, nivelación y relleno controlado.";
- }
- if(tipo==='topografia'){
- texto="Servicios topográficos con GPS, drones, estaciones totales y geodesia satelital.";
- }
  if(tipo==='proyecto1'){
- texto="Proyecto Puertas del Sol II: instalación de redes sanitarias completas con más de 1800m de tubería.";
+ texto="Proyecto Puertas del Sol II: instalación de redes sanitarias con más de 1800m de tubería.";
+ img="obra1.jpg";
  }
  if(tipo==='proyecto2'){
- texto="Proyecto Casa Blanca VII: movimiento de tierra y suministro de maquinaria pesada.";
+ texto="Proyecto Casa Blanca VII: movimiento de tierra y maquinaria pesada.";
+ img="obra2.jpg";
+ }
+ if(tipo==='proyecto3'){
+ texto="Construcción de parque Planicie de Cañete, área de 6500 m2.";
+ img="obra3.jpg";
+ }
+ if(tipo==='proyecto4'){
+ texto="Construcción de Tótem de ingreso Villa Refugio Del Sol Chiclayo.";
+ img="obra4.jpg";
+ }
+ if(tipo==='proyecto5'){
+ texto="Relleno ET4 y ET6 de Villa Refugio Del Sol Chiclayo.";
+ img="obra5.jpg";
  }
 
  document.getElementById('contenido').innerText=texto;
+ document.getElementById('imagen').src=img;
  document.getElementById('modal').style.display='block';
 }
 
