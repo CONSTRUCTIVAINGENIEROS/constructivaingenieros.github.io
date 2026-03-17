@@ -6,22 +6,22 @@
 <title>Constructiva Ingenieros</title>
 <style>
 body{margin:0;font-family:Arial;background:#f4f4f4}
-header{background:#000;color:#fff;padding:15px 30px;display:flex;justify-content:space-between}
+header{background:#000;color:#fff;padding:15px 30px;display:flex;justify-content:space-between;align-items:center}
 header img{height:45px}
 nav a{color:#fff;margin:0 10px;text-decoration:none}
-.hero{background:#222;color:#fff;text-align:center;padding:80px 20px}
-.hero h1{font-size:40px}
-.btn{background:#25D366;color:#fff;padding:12px 20px;border-radius:8px;text-decoration:none}
-.section{padding:50px 20px;text-align:center}
+.hero{background:url('obra1.jpg') center/cover no-repeat;color:#fff;text-align:center;padding:100px 20px}
+.hero h1{font-size:42px;margin-bottom:10px}
+.hero p{font-size:18px}
+.btn{background:#25D366;color:#fff;padding:14px 22px;border-radius:8px;text-decoration:none;display:inline-block;margin-top:15px}
+.section{padding:60px 20px;text-align:center}
 .grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}
-.card{background:#fff;border-radius:10px;padding:20px;width:260px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
-.card:hover{transform:scale(1.05)}
-.stats{display:flex;justify-content:center;gap:40px;margin-top:20px}
-.stat{font-size:20px}
-.gallery img{width:250px;border-radius:10px}
-.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);color:#fff;padding:40px}
-.modal-content{max-width:600px;margin:auto}
-.close{cursor:pointer;color:red}
+.card{background:#fff;border-radius:12px;padding:20px;width:270px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.1);transition:0.3s}
+.card:hover{transform:translateY(-5px)}
+.stats{display:flex;justify-content:center;gap:40px;margin-top:30px;font-weight:bold}
+.gallery img{width:260px;border-radius:10px}
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);color:#fff;padding:40px}
+.modal-content{max-width:650px;margin:auto}
+.close{cursor:pointer;color:red;font-size:20px}
 .whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:15px;border-radius:50%}
 </style>
 </head>
@@ -35,14 +35,18 @@ nav a{color:#fff;margin:0 10px;text-decoration:none}
 </nav>
 </header>
 <section class="hero">
-<h1>ESPECIALISTAS EN OBRAS CIVILES Y URBANIZACIÓN</h1>
-<p>Ejecutamos proyectos de ingeniería con calidad, cumplimiento y experiencia comprobada</p>
-<a class="btn" href="https://wa.me/51900563515">Solicitar Cotización</a>
+<h1>OBRAS CIVILES Y URBANIZACIÓN CON RESPALDO PROFESIONAL</h1>
+<p>Ejecutamos proyectos de ingeniería cumpliendo plazos, calidad y estándares técnicos</p>
+<a class="btn" href="https://wa.me/51900563515?text=Hola%20quiero%20cotizar%20un%20proyecto">Solicitar Cotización</a>
 <div class="stats">
-<div class="stat">+6 Años de experiencia</div>
-<div class="stat">+50 Proyectos ejecutados</div>
-<div class="stat">Cobertura nacional</div>
+<div>+6 Años</div>
+<div>+50 Proyectos</div>
+<div>Cobertura Nacional</div>
 </div>
+</section>
+<section class="section">
+<h2>¿Por qué elegirnos?</h2>
+<p>Trabajamos con enfoque técnico, cumplimiento de plazos y experiencia en proyectos urbanos y obras civiles a nivel nacional.</p>
 </section>
 <section id="servicios" class="section">
 <h2>Servicios</h2>
@@ -54,7 +58,7 @@ nav a{color:#fff;margin:0 10px;text-decoration:none}
 </div>
 </section>
 <section id="proyectos" class="section">
-<h2>Proyectos Destacados</h2>
+<h2>Proyectos Ejecutados</h2>
 <div class="grid">
 <div class="card" onclick="openModal('p1')">Puertas del Sol II</div>
 <div class="card" onclick="openModal('p2')">Casa Blanca VII</div>
@@ -73,31 +77,35 @@ nav a{color:#fff;margin:0 10px;text-decoration:none}
 <img src="obra5.jpg">
 </div>
 </section>
+<section class="section">
+<h2>Experiencia</h2>
+<p>Participación en proyectos de urbanización, redes sanitarias y movimiento de tierras para desarrollos inmobiliarios y obras civiles.</p>
+</section>
 <section id="contacto" class="section">
 <h2>Contacto</h2>
 <p>📧 contacto@constructiva.com</p>
 <p>📞 +51 900 563 515</p>
-<a class="btn" href="https://wa.me/51900563515?text=Hola%20quiero%20cotizar%20un%20proyecto">Cotizar por WhatsApp</a>
+<a class="btn" href="https://wa.me/51900563515?text=Hola%20quiero%20cotizar%20un%20proyecto">Cotizar ahora</a>
 </section>
 <div id="modal" class="modal">
 <div class="modal-content">
 <span class="close" onclick="closeModal()">X</span>
-<img id="img" style="width:100%;border-radius:10px">
+<img id="img" style="width:100%;border-radius:10px;margin-bottom:15px">
 <p id="text"></p>
 </div>
 </div>
-<a class="whatsapp" href="https://wa.me/51900563515">💬</a>
+<a class="whatsapp" href="https://wa.me/51900563515?text=Hola%20quiero%20cotizar%20un%20proyecto">Cotizar por WhatsApp</a>
 <script>
 function openModal(t){
 let txt="";let img="";
-if(t==='p1'){txt="Redes sanitarias completas – +1800 ml tubería instaladas en urbanización.";img='obra1.jpg';}
+if(t==='p1'){txt="Cliente: Proyecto urbano – +1800 ml redes sanitarias.";img='obra1.jpg';}
 if(t==='p2'){txt="Movimiento de tierra y nivelación con maquinaria pesada.";img='obra2.jpg';}
-if(t==='p3'){txt="Construcción de parque en Planicie de Cañete – 6500 m2.";img='obra3.jpg';}
+if(t==='p3'){txt="Construcción de parque – 6500 m2 Planicie de Cañete.";img='obra3.jpg';}
 if(t==='p4'){txt="Construcción de tótem de ingreso urbano con acabados.";img='obra4.jpg';}
-if(t==='p5'){txt="Relleno estructural ET4 y ET6 con compactación controlada.";img='obra5.jpg';}
-if(t==='sanitaria'){txt="Ejecución de redes de agua y alcantarillado.";img='obra1.jpg';}
-if(t==='tierra'){txt="Excavación, relleno y nivelación.";img='obra7.jpg';}
-if(t==='topografia'){txt="Levantamientos topográficos con tecnología moderna.";img='obra8.jpg';}
+if(t==='p5'){txt="Relleno estructural ET4 y ET6 con compactación.";img='obra5.jpg';}
+if(t==='sanitaria'){txt="Instalación de redes de agua y alcantarillado.";img='obra1.jpg';}
+if(t==='tierra'){txt="Excavación, relleno y nivelación.";img='obra2.jpg';}
+if(t==='topografia'){txt="Levantamientos con equipos de precisión.";img='obra3.jpg';}
 if(t==='dron'){txt="Drones para levantamientos fotogramétricos.";img='obra9.jpg';}
 document.getElementById('text').innerText=txt;
 document.getElementById('img').src=img;
