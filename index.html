@@ -12,20 +12,17 @@
     nav a:hover { color:#25D366; }
 
     .hero { background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e'); background-size:cover; color:#fff; text-align:center; padding:80px 20px; }
-    .hero h1 { font-size:40px; margin-bottom:10px; }
-    .hero p { font-size:18px; margin-bottom:20px; }
+    .hero h1 { font-size:40px; }
 
-    .btn { background:#25D366; color:#fff; padding:12px 25px; border:none; border-radius:8px; text-decoration:none; font-weight:bold; }
-    .btn:hover { background:#1ebe5d; }
+    .btn { background:#25D366; color:#fff; padding:12px 25px; border-radius:8px; text-decoration:none; font-weight:bold; }
 
     .section { padding:50px 20px; text-align:center; }
     .grid { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
-    .card { border:1px solid #ddd; padding:25px; border-radius:10px; width:260px; transition:0.3s; }
-    .card:hover { transform:translateY(-5px); box-shadow:0 5px 15px rgba(0,0,0,0.1); }
+    .card { border:1px solid #ddd; padding:20px; border-radius:10px; width:280px; }
 
     footer { background:#000; color:#fff; text-align:center; padding:20px; }
 
-    .whatsapp { position:fixed; bottom:20px; right:20px; background:#25D366; color:#fff; padding:15px 18px; border-radius:50%; text-decoration:none; font-weight:bold; }
+    .whatsapp { position:fixed; bottom:20px; right:20px; background:#25D366; color:#fff; padding:15px; border-radius:50%; text-decoration:none; }
   </style>
 </head>
 <body>
@@ -37,53 +34,66 @@
   </div>
   <nav>
     <a href="#servicios">Servicios</a>
-    <a href="#nosotros">Nosotros</a>
+    <a href="#proyectos">Proyectos</a>
     <a href="#contacto">Contacto</a>
   </nav>
 </header>
 
 <section class="hero">
-  <h1>CONSTRUCTIVA INGENIEROS</h1>
-  <p>Construimos el futuro contigo</p>
-  <a class="btn" href="https://wa.me/51999999999" target="_blank">Solicitar Cotización</a>
+  <h1>Ingeniería que transforma espacios</h1>
+  <p>Más de 6 años de experiencia en construcción e ingeniería</p>
+  <a class="btn" href="https://wa.me/51900563515" target="_blank">Solicitar Cotización</a>
 </section>
 
-<section id="servicios" class="section">
+<section class="section">
+  <h2>Sobre Nosotros</h2>
+  <p style="max-width:700px; margin:auto;">
+    Constructiva Ingenieros S.A.C cuenta con más de 6 años de experiencia en redes sanitarias, topografía, movimiento de tierras, expedientes técnicos y servicios generales.
+    Nuestro equipo está conformado por profesionales altamente capacitados, enfocados en brindar soluciones eficientes y maximizar la rentabilidad de nuestros clientes.
+  </p>
+</section>
+
+<section id="servicios" class="section" style="background:#f5f5f5;">
   <h2>Servicios</h2>
   <div class="grid">
+    <div class="card">Redes Sanitarias</div>
+    <div class="card">Movimiento de Tierra</div>
+    <div class="card">Topografía y Geodesia</div>
+    <div class="card">Expedientes Técnicos</div>
+    <div class="card">Servicios Generales</div>
+  </div>
+</section>
+
+<section id="proyectos" class="section">
+  <h2>Proyectos Destacados</h2>
+  <div class="grid">
     <div class="card">
-      <h3>Obras Civiles</h3>
-      <p>Construcción de viviendas, edificios y obras públicas.</p>
+      <h3>Puertas del Sol II</h3>
+      <p>Redes de agua potable y alcantarillado en Chiclayo.</p>
     </div>
     <div class="card">
-      <h3>Diseño Estructural</h3>
-      <p>Cálculo y diseño según normas técnicas vigentes.</p>
+      <h3>Casa Blanca VII</h3>
+      <p>Movimiento de tierra y maquinaria pesada.</p>
     </div>
     <div class="card">
-      <h3>Supervisión de Proyectos</h3>
-      <p>Control de calidad, costos y tiempos de obra.</p>
+      <h3>Planicie de Cañete</h3>
+      <p>Construcción de parque de 6500 m².</p>
     </div>
   </div>
 </section>
 
-<section id="nosotros" class="section" style="background:#f5f5f5;">
-  <h2>Nosotros</h2>
-  <p style="max-width:600px; margin:auto;">
-    Somos una empresa especializada en ingeniería y construcción, comprometida con la calidad, seguridad y cumplimiento de plazos en cada proyecto.
-  </p>
-</section>
-
-<section id="contacto" class="section">
+<section id="contacto" class="section" style="background:#f5f5f5;">
   <h2>Contacto</h2>
-  <p>Correo: constructivaingenieross@gmail.com</p>
+  <p>Email: constructivaingenieross@gmail.com</p>
   <p>Teléfono: +51 900 563 515</p>
+  <p>RUC: 20604157766</p>
   <a class="btn" href="https://wa.me/51900563515" target="_blank">Escribir por WhatsApp</a>
 </section>
 
 <a class="whatsapp" href="https://wa.me/51900563515" target="_blank">💬</a>
 
 <footer>
-  © 2026 CONSTRUCTIVA INGENIEROS - Todos los derechos reservados
+  © 2026 Constructiva Ingenieros S.A.C
 </footer>
 
 </body>
